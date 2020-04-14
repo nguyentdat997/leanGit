@@ -26,3 +26,29 @@ int * TangDan(int *array, int n)
     }
     return array;
 }
+
+/************************************************************
+function GiamDan: sort array in descending order
+input: array pointer point to array
+       n number element of array
+output: array pointer point to array
+************************************************************/
+int * GiamDan(int *array, int n)
+{
+    int i =0;
+    int j =0;
+    int temp =0;
+    for (i =0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(array[i]<array[j])
+            {
+                temp = array[i];
+                array[i]= array[j];
+                array[j]=temp;
+            }
+        }
+    }
+    return array;
+}

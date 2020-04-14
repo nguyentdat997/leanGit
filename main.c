@@ -27,6 +27,13 @@ int main()
         printf("array[%d] = %d\n",i,*(array+i));
         fflush(stdin);
     }
+    printf("Data after sort in descending order:\n");
+    array = GiamDan(array,n);
+    for(i=0;i<n;i++)
+    {
+        printf("array[%d] = %d\n",i,*(array+i));
+        fflush(stdin);
+    }
     free(array);
 }
 
