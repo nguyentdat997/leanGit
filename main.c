@@ -1,5 +1,5 @@
 #include <stdio.h>
-#incldue <stdlib.h>
+#include <stdlib.h>
 
 /************************************************************
 function TangDan: sort array in ascending order
@@ -14,7 +14,7 @@ int * TangDan(int *array, int n)
     int temp =0;
     for (i =0;i<n-1;i++)
     {
-        for(j=i+1;i<n;j++)
+        for(j=i+1;j<n;j++)
         {
             if(array[j]<array[i])
             {
@@ -40,7 +40,17 @@ int main()
     printf("Input data for array:\n");
     for(i=0;i<n;i++)
     {
+        printf("array[%d] = ",i);
+        fflush(stdin);
+        scanf("%d",array+i);
+    }
+
+    printf("Data after sort in ascending order:\n");
+    array = TangDan(array,n);
+    for(i=0;i<n;i++)
+    {
         printf("array[%d] = %d\n",i,*(array+i));
+        fflush(stdin);
     }
     free(array);
 }
